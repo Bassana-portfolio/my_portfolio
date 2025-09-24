@@ -1,0 +1,39 @@
+# Node modules (réinstallés dans le conteneur)
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Output directories
+.next
+out
+dist
+
+# Logs
+*.log
+logs
+
+# Environment files (⚠️ gérés via secrets en prod)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Git & CI/CD
+.git
+.gitignore
+.github
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode
+.idea
+*.swp
+*.swo
+
+# Test coverage
+coverage
