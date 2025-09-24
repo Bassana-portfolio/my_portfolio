@@ -40,6 +40,7 @@ jobs:
 
       # 4. Security scan
       - name: Run Snyk SAST
+        if: github.event.pull_request.base.ref == 'main'
         uses: snyk/actions/node@master
         with:
           args: test
@@ -94,7 +95,7 @@ jobs:
   deploy-k3s:
     runs-on: ubuntu-latest
     needs: docker-build-push
-    if: github.event.pull_request.base.ref == 'main' || github.event.pull_request.base.ref == 'develop'
+    if: github.event.pull_request.base.ref == 'main'
     env:
       DEPLOYMENT_NAME: my-app
       CONTAINER_NAME: my-app
